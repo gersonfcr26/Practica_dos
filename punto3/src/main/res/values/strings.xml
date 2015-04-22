@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Punto3</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">NOTA DEL CURSO</string>
+    <string name="tQuizzes">Quices     (15%): </string>
+    <string name="tExpo">Exposición (10%): </string>
+    <string name="tLab">Laboratorio(40%): </string>
+    <string name="tFinal">Final      (35%): </string>
+    <string name="calc">Calcular</string>
+    <string name="text">La nota final del curso es: </string>
+</resources>

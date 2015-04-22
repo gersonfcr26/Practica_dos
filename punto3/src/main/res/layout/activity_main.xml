@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/midnightblue"
+    android:layout_margin="10dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:text="@string/title"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textColor="@color/gold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/tQuizzes"
+            android:textSize="25dp"
+            android:textColor="@color/paleturquoise"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="@color/whitesmoke"
+            android:text="0"
+            android:textSize="25dp"
+            android:textColor="@color/darkblue"
+            android:textStyle="italic"
+            android:inputType="numberDecimal"
+            android:id="@+id/eQuiz"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/tExpo"
+            android:textSize="25dp"
+            android:textColor="@color/paleturquoise"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="@color/whitesmoke"
+            android:text="0"
+            android:textSize="25dp"
+            android:textColor="@color/darkblue"
+            android:textStyle="italic"
+            android:inputType="numberDecimal"
+            android:id="@+id/eExpo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/tLab"
+            android:textSize="25dp"
+            android:textColor="@color/paleturquoise"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="@color/whitesmoke"
+            android:text="0"
+            android:textSize="25dp"
+            android:textColor="@color/darkblue"
+            android:textStyle="italic"
+            android:inputType="numberDecimal"
+            android:id="@+id/eLab"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/tFinal"
+            android:textSize="25dp"
+            android:textColor="@color/paleturquoise"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:background="@color/whitesmoke"
+            android:text="0"
+            android:textSize="25dp"
+            android:textColor="@color/darkblue"
+            android:textStyle="italic"
+            android:inputType="numberDecimal"
+            android:id="@+id/eFinal"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
+        android:background="@color/goldenrod"
+        android:text="@string/calc"
+        android:textColor="@color/blue"
+        android:textSize="25dp"
+        android:id="@+id/button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/text"
+        android:textColor="@color/paleturquoise"
+        android:textSize="25dp"
+        android:id="@+id/eText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/whitesmoke"
+        android:textSize="25dp"
+        android:id="@+id/eScore"/>
+
+</LinearLayout>

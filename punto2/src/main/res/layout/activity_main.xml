@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/op1"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="@color/darkcyan"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/op2"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="@color/darkcyan"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/whitesmoke"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:text="0"
+            android:inputType="numberDecimal"
+            android:id="@+id/eOp1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/whitesmoke"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:text="0"
+            android:inputType="numberDecimal"
+            android:id="@+id/eOp2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp">
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/add"
+            android:textColor="@color/whitesmoke"
+            android:checked="true"
+            android:id="@+id/eAdd"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sub"
+            android:textColor="@color/whitesmoke"
+            android:checked="false"
+            android:id="@+id/eSub"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp">
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mult"
+            android:textColor="@color/whitesmoke"
+            android:checked="false"
+            android:id="@+id/eMult"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/div"
+            android:textColor="@color/whitesmoke"
+            android:checked="false"
+            android:id="@+id/eDiv"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:gravity="center"
+        android:text="@string/calc"
+        android:background="@color/darkcyan"
+        android:id="@+id/eButton"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="..."
+        android:textColor="@color/whitesmoke"
+        android:textSize="25dp"
+        android:id="@+id/eResult"/>
+
+</LinearLayout>

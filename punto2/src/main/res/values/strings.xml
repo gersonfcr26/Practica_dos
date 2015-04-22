@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Punto2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="op1">Operando 1</string>
+    <string name="op2">Operando 2</string>
+    <string name="calc">Calcular</string>
+    <string name="add">Suma</string>
+    <string name="sub">Resta</string>
+    <string name="mult">Multiplicación</string>
+    <string name="div">División</string>
+</resources>

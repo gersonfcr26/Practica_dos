@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">punto5</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="data">DATOS PERSONALES</string>
+    <string name="nombre">Nombre</string>
+    <string name="hint_nombre">Digite su nombre</string>
+    <string name="correo">Correo</string>
+    <string name="hint_correo">Digite su correo</string>
+    <string name="telefono">Teléfono</string>
+    <string name="hint_telefono">Digite su teléfono</string>
+    <string name="button">OK</string>
+    <string name="female">Femenino</string>
+    <string name="male">Masculino</string>
+    <string name="gender">Género</string>
+    <string name="city">Ciudad</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="birthday">Fec. Nac.</string>
+    
+    <string name="hobby1">Fútbol</string>
+    <string name="hobby2">Baloncesto</string>
+    <string name="hobby3">Tennis</string>
+    <string name="hobby4">Automovilismo</string>
+
+    <string-array name="cities">
+        <item>Arauca</item>
+        <item>Armenia</item>
+        <item>Barranquilla</item>
+        <item>Bogotá</item>
+        <item>Bucaramanga</item>
+        <item>Cali</item>
+        <item>Caquetá</item>
+        <item>Cartagena</item>
+        <item>Cúcuta</item>
+        <item>Ibagué</item>
+        <item>Leticia</item>
+        <item>Manizales</item>
+        <item>Medellín</item>
+        <item>Mitú</item>
+        <item>Mocoa</item>
+        <item>Monteria</item>
+        <item>Neiva</item>
+        <item>Pasto</item>
+        <item>Pereira</item>
+        <item>Popayán</item>
+        <item>Puerto Carreño</item>
+        <item>Puerto Inírida</item>
+        <item>Quibdó</item>
+        <item>Riohacha</item>
+        <item>San Andrés</item>
+        <item>San José del Guaviare</item>
+        <item>Santa Marta</item>
+        <item>Sincelejo</item>
+        <item>Tunja</item>
+        <item>Valledupar</item>
+        <item>Villavicencio</item>
+        <item>Yopal</item>
+    </string-array>
+</resources>
