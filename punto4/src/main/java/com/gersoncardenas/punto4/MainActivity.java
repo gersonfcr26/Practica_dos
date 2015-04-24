@@ -57,49 +57,53 @@ public class MainActivity extends ActionBarActivity {
                 Toast msg = Toast.makeText(context,text,duration);
 
                 if (square.isChecked()) {
+
                     if(!strSide.isEmpty()) {
                         numSide = Float.parseFloat(strSide);
                         numResult = numSide * numSide;
 
                     }else{
-                        result.setText("");
+                        result.setEnabled(false);
                         msg.show();
                         error = true;
 
                     }
 
                 } else if (triangle.isChecked()) {
+
                     if(!strBase.isEmpty() && !strHeight.isEmpty()){
                         numBase = Float.parseFloat(strBase);
                         numHeight = Float.parseFloat(strHeight);
                         numResult = (numBase * numHeight) / 2;
 
                     }else{
-                        result.setText("");
+                        result.setEnabled(false);
                         msg.show();
                         error = true;
                     }
 
 
                 } else if (rectangle.isChecked()) {
+
                     if(!strBase.isEmpty() && !strHeight.isEmpty()){
                         numBase = Float.parseFloat(strBase);
                         numHeight = Float.parseFloat(strHeight);
                         numResult = (numBase * numHeight);
 
                     }else{
-                        result.setText("");
+                        result.setEnabled(false);
                         msg.show();
                         error = true;
                     }
 
                 } else if (circle.isChecked()) {
+
                     if(!strRadius.isEmpty()){
                         numRadius = Float.parseFloat(strRadius);
                         numResult = (float) Math.PI * numRadius * numRadius;
 
                     }else{
-                        result.setText("");
+                        result.setEnabled(false);
                         msg.show();
                         error = true;
                     }
@@ -112,8 +116,47 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
-    }
 
+        square.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                side.setEnabled(true);
+                base.setEnabled(false);
+                height.setEnabled(false);
+                radius.setEnabled(false);
+            }
+        });
+
+        triangle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                side.setEnabled(false);
+                base.setEnabled(true);
+                height.setEnabled(true);
+                radius.setEnabled(false);
+            }
+        });
+
+        rectangle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                side.setEnabled(false);
+                base.setEnabled(true);
+                height.setEnabled(true);
+                radius.setEnabled(false);
+            }
+        });
+
+        circle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                side.setEnabled(false);
+                base.setEnabled(false);
+                height.setEnabled(false);
+                radius.setEnabled(true);
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

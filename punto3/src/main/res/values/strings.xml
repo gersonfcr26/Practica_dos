@@ -10,4 +10,6 @@
     <string name="tFinal">Final      (35%): </string>
     <string name="calc">Calcular</string>
     <string name="text">La nota final del curso es: </string>
+    
+    <string name="hint">(0.0-5.0)</string>
 </resources>

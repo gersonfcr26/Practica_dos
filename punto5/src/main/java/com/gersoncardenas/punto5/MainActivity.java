@@ -1,7 +1,9 @@
 package com.gersoncardenas.punto5;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -62,46 +64,61 @@ public class MainActivity extends ActionBarActivity{
             @Override
             public void onClick(View v) {
 
-                //setContentView(R.layout.result);
+                String strName = name.getText().toString();
+                String strEmail = email.getText().toString();
+                String strPhone = phone.getText().toString();
 
-                tName.setText(name.getText());
-                tEmail.setText(email.getText());
-                tPhone.setText(phone.getText());
+                if(!strName.isEmpty() && !strEmail.isEmpty() && !strPhone.isEmpty()) {
 
-                if(female.isChecked()){
-                    tGender.setText(female.getText());
+                    tName.setText(name.getText());
+                    tEmail.setText(email.getText());
+                    tPhone.setText(phone.getText());
 
-                }else if(male.isChecked()){
-                    tGender.setText(male.getText());
+                    if (female.isChecked()) {
+                        tGender.setText(female.getText());
+
+                    } else if (male.isChecked()) {
+                        tGender.setText(male.getText());
+                    }
+
+                    tCity.setText(adapter.getItem(pos));
+                    tBirthday.setText(birthday.getDayOfMonth() + "/" + birthday.getMonth() + "/" + birthday.getYear());
+
+                    String strHobby1 = hobby1.getText().toString();
+                    String strHobby2 = hobby2.getText().toString();
+                    String strHobby3 = hobby3.getText().toString();
+                    String strHobby4 = hobby4.getText().toString();
+                    String strHobbies = "";
+
+                    if (hobby1.isChecked()) {
+                        strHobbies = strHobby1;
+
+                    }
+                    if (hobby2.isChecked()) {
+                        strHobbies = strHobbies + " " + strHobby2;
+
+                    }
+                    if (hobby3.isChecked()) {
+                        strHobbies = strHobbies + " " + strHobby3;
+
+                    }
+                    if (hobby4.isChecked()) {
+                        strHobbies = strHobbies + " " + strHobby4;
+                    }
+
+                    if (strHobbies == "") {
+                        strHobbies = "No tiene hobbies";
+                    }
+
+                    tHobbies.setText(strHobbies);
+
+                }else{
+                    Context context = getApplicationContext();
+                    CharSequence text = "Espacios requeridos en blanco";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast msg = Toast.makeText(context,text,duration);
+                    msg.show();
                 }
-
-                tCity.setText(adapter.getItem(pos));
-                tBirthday.setText(birthday.getDayOfMonth()+"/"+birthday.getMonth()+"/"+birthday.getYear());
-
-                String strHobby1 =  hobby1.getText().toString();
-                String strHobby2 = hobby2.getText().toString();
-                String strHobby3 = hobby3.getText().toString();
-                String strHobby4 = hobby4.getText().toString();
-                String strHobbies = "";
-
-                if(hobby1.isChecked()) {
-                    strHobbies = strHobby1;
-
-                }if(hobby2.isChecked()){
-                    strHobbies = strHobbies+" "+strHobby2;
-
-                }if(hobby3.isChecked()){
-                    strHobbies = strHobbies+" "+strHobby3;
-
-                }if(hobby4.isChecked()){
-                    strHobbies = strHobbies+" "+strHobby4;
-                }
-
-                if(strHobbies == ""){
-                    strHobbies = "No tiene hobbies";
-                }
-
-                tHobbies.setText(strHobbies);
             }
         });
 

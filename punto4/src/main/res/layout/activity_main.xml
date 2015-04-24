@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:text="@string/side"
             android:textSize="20dp"
             android:textColor="@color/whitesmoke" />
@@ -38,10 +38,12 @@
             android:gravity="center"
             android:layout_weight="1"
             android:background="@color/whitesmoke"
-            android:text="0"
+            android:hint="@string/hintSquare"
+            android:textColorHint="@color/gray"
             android:textSize="20dp"
             android:textColor="@color/black"
             android:inputType="numberDecimal"
+            android:enabled="true"
             android:id="@+id/eSide"/>
 
     </LinearLayout>
@@ -55,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:text="@string/base"
             android:textSize="20dp"
             android:textColor="@color/whitesmoke" />
@@ -68,10 +70,12 @@
             android:gravity="center"
             android:layout_weight="1"
             android:background="@color/whitesmoke"
-            android:text="0"
+            android:hint="@string/hintTriangle"
+            android:textColorHint="@color/gray"
             android:textSize="20dp"
             android:textColor="@color/black"
             android:inputType="numberDecimal"
+            android:enabled="false"
             android:id="@+id/eBase"/>
 
     </LinearLayout>
@@ -85,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:text="@string/height"
             android:textSize="20dp"
             android:textColor="@color/whitesmoke" />
@@ -98,10 +102,12 @@
             android:gravity="center"
             android:layout_weight="1"
             android:background="@color/whitesmoke"
-            android:text="0"
+            android:hint="@string/hintTriangle"
+            android:textColorHint="@color/gray"
             android:textSize="20dp"
             android:textColor="@color/black"
             android:inputType="numberDecimal"
+            android:enabled="false"
             android:id="@+id/eHeight"/>
 
     </LinearLayout>
@@ -115,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:text="@string/radius"
             android:textSize="20dp"
             android:textColor="@color/whitesmoke" />
@@ -128,10 +134,12 @@
             android:gravity="center"
             android:layout_weight="1"
             android:background="@color/whitesmoke"
-            android:text="0"
+            android:hint="@string/hintCircle"
+            android:textColorHint="@color/gray"
             android:textSize="20dp"
             android:textColor="@color/black"
             android:inputType="numberDecimal"
+            android:enabled="false"
             android:id="@+id/eRadius"/>
 
     </LinearLayout>

@@ -1,5 +1,6 @@
 package com.gersoncardenas.punto3;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -25,12 +27,9 @@ public class MainActivity extends ActionBarActivity {
         final Button button = (Button)findViewById(R.id.button);
 
         final TextView result = (TextView)findViewById(R.id.eScore);
-        final TextView text = (TextView)findViewById(R.id.eText);
+        final TextView previousText = (TextView)findViewById(R.id.eText);
 
-        text.setEnabled(false);
-
-        //final float scoreQuiz, scoreExpo, scoreLab, scoreFinal, totalScore;
-        //final String strQuiz, strExpo, strLab, strFinal, strTotal;
+        previousText.setText("");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +40,10 @@ public class MainActivity extends ActionBarActivity {
                 final String strLab = lab.getText().toString();
                 final String strFinal = pFinal.getText().toString();
 
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+                CharSequence text;
+
                 if(!strQuiz.isEmpty() && !strExpo.isEmpty() && !strLab.isEmpty() && !strFinal.isEmpty()) {
 
                     final float scoreQuiz = Float.parseFloat(strQuiz);
@@ -49,19 +52,26 @@ public class MainActivity extends ActionBarActivity {
                     final float scoreFinal = Float.parseFloat(strFinal);
 
                     if(scoreQuiz >= 0 && scoreQuiz <= 5 && scoreExpo >= 0 && scoreExpo <= 5 && scoreLab >= 0 && scoreLab <= 5 && scoreFinal >= 0 && scoreFinal <= 5) {
+
                         final float totalScore = 0.15f * scoreQuiz + 0.1f * scoreExpo + 0.4f * scoreLab + 0.35f * scoreFinal;
                         final String strTotal = new Float(totalScore).toString();
-                        text.setEnabled(true);
+                        previousText.setText("La nota final del curso es: ");
                         result.setText(strTotal);
 
                     }else{
-                        result.setText("Valores invalidos!");
-                        text.setEnabled(false);
+                        result.setText("");
+                        previousText.setText("");
+                        text = "ValoresInvalidos!";
+                        Toast msg = Toast.makeText(context,text,duration);
+                        msg.show();
                     }
 
                 }else{
-                    result.setText("Hay espacios en blanco!");
-                    text.setEnabled(false);
+                    result.setText("");
+                    previousText.setText("");
+                    text = "Espacios requeridos en blanco";
+                    Toast msg = Toast.makeText(context,text,duration);
+                    msg.show();
                 }
             }
         });

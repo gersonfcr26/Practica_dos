@@ -14,5 +14,8 @@
     <string name="circle">Círculo</string>
     <string name="button">Calcular</string>
     <string name="text">El área es: </string>
+    <string name="hintSquare">Cuadrado</string>
+    <string name="hintTriangle">Triángulo o Rectángulo</string>
+    <string name="hintCircle">Círculo</string>
     
 </resources>

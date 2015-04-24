@@ -3,8 +3,9 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="op1">Operando 1</string>
-    <string name="op2">Operando 2</string>
+    <string name="title">Operaciones</string>
+    <string name="op1">Operando1</string>
+    <string name="op2">Operando2</string>
     <string name="calc">Calcular</string>
     <string name="add">Suma</string>
     <string name="sub">Resta</string>

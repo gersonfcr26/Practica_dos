@@ -3,8 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/midnightblue"
-    android:layout_margin="10dp"
+    android:background="@color/black"
+    android:layout_margin="5dp"
     android:gravity="center">
 
     <TextView
@@ -29,8 +29,8 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="@string/tQuizzes"
-            android:textSize="25dp"
-            android:textColor="@color/paleturquoise"
+            android:textSize="20dp"
+            android:textColor="@color/goldenrod"
             android:textStyle="bold"/>
 
         <EditText
@@ -40,8 +40,9 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:background="@color/whitesmoke"
-            android:text="0"
-            android:textSize="25dp"
+            android:hint="@string/hint"
+            android:textColorHint="@color/gray"
+            android:textSize="20dp"
             android:textColor="@color/darkblue"
             android:textStyle="italic"
             android:inputType="numberDecimal"
@@ -61,8 +62,8 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="@string/tExpo"
-            android:textSize="25dp"
-            android:textColor="@color/paleturquoise"
+            android:textSize="20dp"
+            android:textColor="@color/goldenrod"
             android:textStyle="bold"/>
 
         <EditText
@@ -72,8 +73,9 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:background="@color/whitesmoke"
-            android:text="0"
-            android:textSize="25dp"
+            android:hint="@string/hint"
+            android:textColorHint="@color/gray"
+            android:textSize="20dp"
             android:textColor="@color/darkblue"
             android:textStyle="italic"
             android:inputType="numberDecimal"
@@ -93,8 +95,8 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="@string/tLab"
-            android:textSize="25dp"
-            android:textColor="@color/paleturquoise"
+            android:textSize="20dp"
+            android:textColor="@color/goldenrod"
             android:textStyle="bold"/>
 
         <EditText
@@ -104,8 +106,9 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:background="@color/whitesmoke"
-            android:text="0"
-            android:textSize="25dp"
+            android:hint="@string/hint"
+            android:textColorHint="@color/gray"
+            android:textSize="20dp"
             android:textColor="@color/darkblue"
             android:textStyle="italic"
             android:inputType="numberDecimal"
@@ -125,8 +128,8 @@
             android:layout_weight="2"
             android:gravity="center"
             android:text="@string/tFinal"
-            android:textSize="25dp"
-            android:textColor="@color/paleturquoise"
+            android:textSize="20dp"
+            android:textColor="@color/goldenrod"
             android:textStyle="bold"/>
 
         <EditText
@@ -136,8 +139,9 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:background="@color/whitesmoke"
-            android:text="0"
-            android:textSize="25dp"
+            android:hint="@string/hint"
+            android:textColorHint="@color/gray"
+            android:textSize="20dp"
             android:textColor="@color/darkblue"
             android:textStyle="italic"
             android:inputType="numberDecimal"
@@ -146,31 +150,32 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:layout_gravity="center"
         android:background="@color/goldenrod"
         android:text="@string/calc"
-        android:textColor="@color/blue"
-        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         android:id="@+id/button"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:enabled="false"
         android:text="@string/text"
-        android:textColor="@color/paleturquoise"
-        android:textSize="25dp"
+        android:textColor="@color/whitesmoke"
+        android:textSize="20dp"
         android:id="@+id/eText"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textColor="@color/whitesmoke"
-        android:textSize="25dp"
+        android:textColor="@color/goldenrod"
+        android:textSize="20dp"
         android:id="@+id/eScore"/>
 
 </LinearLayout>
