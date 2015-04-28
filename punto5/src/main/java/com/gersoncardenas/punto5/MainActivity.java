@@ -24,7 +24,17 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends ActionBarActivity{
 
-    int pos;
+    private TextView tName, tEmail, tPhone, tGender, tCity, tHobbies, tBirthday;
+
+    private static String strName = "text value";
+    private static String strEmail = "text value";
+    private static String strPhone = "text value";
+    private static String strGender = "text value";
+    private static String strCity = "text value";
+    private static String strHobbies = "No tiene hobbies";
+    private static String strBirthday = "text value";
+
+    private int pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,61 +62,77 @@ public class MainActivity extends ActionBarActivity{
 
         Button button = (Button)findViewById(R.id.button);
 
-        final TextView tName = (TextView)findViewById(R.id.tNombre);
-        final TextView tEmail = (TextView)findViewById(R.id.tCorreo);
-        final TextView tPhone = (TextView)findViewById(R.id.tTel);
-        final TextView tGender = (TextView)findViewById(R.id.tGender);
-        final TextView tCity = (TextView)findViewById(R.id.tCity);
-        final TextView tHobbies = (TextView)findViewById(R.id.tHobbies);
-        final TextView tBirthday = (TextView)findViewById(R.id.tBirthday);
+        tName = (TextView)findViewById(R.id.tNombre);
+        tEmail = (TextView)findViewById(R.id.tCorreo);
+        tPhone = (TextView)findViewById(R.id.tTel);
+        tGender = (TextView)findViewById(R.id.tGender);
+        tCity = (TextView)findViewById(R.id.tCity);
+        tHobbies = (TextView)findViewById(R.id.tHobbies);
+        tBirthday = (TextView)findViewById(R.id.tBirthday);
+
+        if(savedInstanceState != null){
+            String savedName = savedInstanceState.getString(strName);
+            tName.setText(savedName);
+            String savedEmail = savedInstanceState.getString(strEmail);
+            tEmail.setText(savedEmail);
+            String savedPhone = savedInstanceState.getString(strPhone);
+            tPhone.setText(savedPhone);
+            String savedGender = savedInstanceState.getString(strGender);
+            tGender.setText(savedGender);
+            String savedCity = savedInstanceState.getString(strCity);
+            tCity.setText(savedCity);
+            String savedHobbies = savedInstanceState.getString(strHobbies);
+            tHobbies.setText(savedHobbies);
+            String savedBirthday = savedInstanceState.getString(strBirthday);
+            tBirthday.setText(savedBirthday);
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String strName = name.getText().toString();
-                String strEmail = email.getText().toString();
-                String strPhone = phone.getText().toString();
+                strName = name.getText().toString();
+                strEmail = email.getText().toString();
+                strPhone = phone.getText().toString();
 
                 if(!strName.isEmpty() && !strEmail.isEmpty() && !strPhone.isEmpty()) {
 
-                    tName.setText(name.getText());
-                    tEmail.setText(email.getText());
-                    tPhone.setText(phone.getText());
+                    tName.setText(strName);
+                    tEmail.setText(strEmail);
+                    tPhone.setText(strPhone);
 
                     if (female.isChecked()) {
-                        tGender.setText(female.getText());
+                        strGender = (String)female.getText();
+                        tGender.setText(strGender);
 
                     } else if (male.isChecked()) {
+                        strGender = (String)male.getText();
                         tGender.setText(male.getText());
                     }
 
-                    tCity.setText(adapter.getItem(pos));
-                    tBirthday.setText(birthday.getDayOfMonth() + "/" + birthday.getMonth() + "/" + birthday.getYear());
+                    strCity = (String)adapter.getItem(pos);
+                    tCity.setText(strCity);
+
+                    strBirthday = birthday.getDayOfMonth() + "/" + (birthday.getMonth()+1) + "/" + birthday.getYear();
+                    tBirthday.setText(strBirthday);
 
                     String strHobby1 = hobby1.getText().toString();
                     String strHobby2 = hobby2.getText().toString();
                     String strHobby3 = hobby3.getText().toString();
                     String strHobby4 = hobby4.getText().toString();
-                    String strHobbies = "";
 
                     if (hobby1.isChecked()) {
                         strHobbies = strHobby1;
 
-                    }
-                    if (hobby2.isChecked()) {
+                    }if (hobby2.isChecked()) {
                         strHobbies = strHobbies + " " + strHobby2;
 
-                    }
-                    if (hobby3.isChecked()) {
+                    }if (hobby3.isChecked()) {
                         strHobbies = strHobbies + " " + strHobby3;
 
-                    }
-                    if (hobby4.isChecked()) {
+                    }if (hobby4.isChecked()) {
                         strHobbies = strHobbies + " " + strHobby4;
-                    }
-
-                    if (strHobbies == "") {
+                    }if (strHobbies == "") {
                         strHobbies = "No tiene hobbies";
                     }
 
@@ -136,6 +162,17 @@ public class MainActivity extends ActionBarActivity{
         });
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(strName, (String) tName.getText());
+        outState.putString(strEmail,(String) tEmail.getText());
+        outState.putString(strPhone,(String) tPhone.getText());
+        outState.putString(strGender,(String) tGender.getText());
+        outState.putString(strCity,(String) tCity.getText());
+        outState.putString(strHobbies,(String) tHobbies.getText());
+        outState.putString(strBirthday,(String) tBirthday.getText());
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

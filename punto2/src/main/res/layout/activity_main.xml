@@ -7,12 +7,9 @@
     android:background="@color/black">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        style="@style/Text"
         android:text="@string/title"
         android:textSize="25dp"
-        android:gravity="center"
         android:textColor="@color/darkcyan"/>
 
     <LinearLayout
@@ -21,29 +18,13 @@
         android:layout_margin="20dp">
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:background="@color/whitesmoke"
-            android:textColor="@color/black"
-            android:textSize="20dp"
+            style="@style/Text.EditText"
             android:hint="@string/op1"
-            android:inputType="numberSigned"
             android:id="@+id/eOp1"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:background="@color/whitesmoke"
-            android:textColor="@color/black"
-            android:textSize="20dp"
+            style="@style/Text.EditText"
             android:hint="@string/op2"
-            android:inputType="numberSigned"
             android:id="@+id/eOp2"/>
 
     </LinearLayout>
@@ -55,24 +36,14 @@
         android:layout_margin="30dp">
 
         <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            style="@style/Text.CheckBox"
             android:text="@string/add"
-            android:textSize="15dp"
-            android:textColor="@color/whitesmoke"
             android:checked="true"
             android:id="@+id/eAdd"/>
 
         <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            style="@style/Text.CheckBox"
             android:text="@string/sub"
-            android:textSize="15dp"
-            android:textColor="@color/whitesmoke"
             android:checked="false"
             android:id="@+id/eSub"/>
 
@@ -85,24 +56,14 @@
         android:layout_margin="30dp">
 
         <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            style="@style/Text.CheckBox"
             android:text="@string/mult"
-            android:textSize="15dp"
-            android:textColor="@color/whitesmoke"
             android:checked="false"
             android:id="@+id/eMult"/>
 
         <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            style="@style/Text.CheckBox"
             android:text="@string/div"
-            android:textSize="15dp"
-            android:textColor="@color/whitesmoke"
             android:checked="false"
             android:id="@+id/eDiv"/>
 
@@ -118,9 +79,7 @@
         android:id="@+id/eButton"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        style="@style/Text"
         android:text="..."
         android:textColor="@color/whitesmoke"
         android:textSize="20dp"

@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
+    private TextView result;
+    private static String strTotal = "text value";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +29,12 @@ public class MainActivity extends ActionBarActivity {
 
         final Button button = (Button)findViewById(R.id.button);
 
-        final TextView result = (TextView)findViewById(R.id.eScore);
-        final TextView previousText = (TextView)findViewById(R.id.eText);
+        result = (TextView)findViewById(R.id.eScore);
 
-        previousText.setText("");
+        if(savedInstanceState != null){
+            String savedText = savedInstanceState.getString(strTotal);
+            result.setText(savedText);
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,13 +59,11 @@ public class MainActivity extends ActionBarActivity {
                     if(scoreQuiz >= 0 && scoreQuiz <= 5 && scoreExpo >= 0 && scoreExpo <= 5 && scoreLab >= 0 && scoreLab <= 5 && scoreFinal >= 0 && scoreFinal <= 5) {
 
                         final float totalScore = 0.15f * scoreQuiz + 0.1f * scoreExpo + 0.4f * scoreLab + 0.35f * scoreFinal;
-                        final String strTotal = new Float(totalScore).toString();
-                        previousText.setText("La nota final del curso es: ");
+                        strTotal = new Float(totalScore).toString();
                         result.setText(strTotal);
 
                     }else{
                         result.setText("");
-                        previousText.setText("");
                         text = "ValoresInvalidos!";
                         Toast msg = Toast.makeText(context,text,duration);
                         msg.show();
@@ -68,7 +71,6 @@ public class MainActivity extends ActionBarActivity {
 
                 }else{
                     result.setText("");
-                    previousText.setText("");
                     text = "Espacios requeridos en blanco";
                     Toast msg = Toast.makeText(context,text,duration);
                     msg.show();
@@ -77,6 +79,11 @@ public class MainActivity extends ActionBarActivity {
         });
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(strTotal,(String)result.getText());
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

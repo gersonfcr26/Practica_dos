@@ -8,10 +8,8 @@
     android:gravity="center">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/Text"
         android:layout_margin="15dp"
-        android:gravity="center"
         android:text="@string/title"
         android:textSize="20dp"
         android:textColor="@color/darkcyan"/>
@@ -22,27 +20,17 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            style="@style/Text"
             android:layout_weight="3"
             android:text="@string/side"
             android:textSize="20dp"
-            android:textColor="@color/whitesmoke" />
+            android:textColor="@color/whitesmoke"
+            android:textStyle="bold"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="50dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:background="@color/whitesmoke"
+            style="@style/Text.Edit"
             android:hint="@string/hintSquare"
-            android:textColorHint="@color/gray"
             android:textSize="20dp"
-            android:textColor="@color/black"
-            android:inputType="numberDecimal"
             android:enabled="true"
             android:id="@+id/eSide"/>
 
@@ -54,27 +42,17 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            style="@style/Text"
             android:layout_weight="3"
             android:text="@string/base"
             android:textSize="20dp"
-            android:textColor="@color/whitesmoke" />
+            android:textColor="@color/whitesmoke"
+            android:textStyle="bold"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="50dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:background="@color/whitesmoke"
+            style="@style/Text.Edit"
             android:hint="@string/hintTriangle"
-            android:textColorHint="@color/gray"
             android:textSize="20dp"
-            android:textColor="@color/black"
-            android:inputType="numberDecimal"
             android:enabled="false"
             android:id="@+id/eBase"/>
 
@@ -86,27 +64,17 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            style="@style/Text"
             android:layout_weight="3"
             android:text="@string/height"
             android:textSize="20dp"
-            android:textColor="@color/whitesmoke" />
+            android:textColor="@color/whitesmoke"
+            android:textStyle="bold"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="50dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:background="@color/whitesmoke"
+            style="@style/Text.Edit"
             android:hint="@string/hintTriangle"
-            android:textColorHint="@color/gray"
             android:textSize="20dp"
-            android:textColor="@color/black"
-            android:inputType="numberDecimal"
             android:enabled="false"
             android:id="@+id/eHeight"/>
 
@@ -118,27 +86,17 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            style="@style/Text"
             android:layout_weight="3"
             android:text="@string/radius"
             android:textSize="20dp"
-            android:textColor="@color/whitesmoke" />
+            android:textColor="@color/whitesmoke"
+            android:textStyle="bold"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="50dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:background="@color/whitesmoke"
+            style="@style/Text.Edit"
             android:hint="@string/hintCircle"
-            android:textColorHint="@color/gray"
             android:textSize="20dp"
-            android:textColor="@color/black"
-            android:inputType="numberDecimal"
             android:enabled="false"
             android:id="@+id/eRadius"/>
 
@@ -151,36 +109,24 @@
         android:gravity="center">
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/Text.Radio"
             android:text="@string/square"
-            android:textSize="15dp"
-            android:textColor="@color/darkcyan"
             android:checked="true"
             android:id="@+id/cSquare"/>
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/Text.Radio"
             android:text="@string/triangle"
-            android:textSize="15dp"
-            android:textColor="@color/darkcyan"
             android:id="@+id/cTriangle"/>
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/Text.Radio"
             android:text="@string/rectangle"
-            android:textSize="15dp"
-            android:textColor="@color/darkcyan"
             android:id="@+id/cRectangle"/>
 
         <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/Text.Radio"
             android:text="@string/circle"
-            android:textSize="15dp"
-            android:textColor="@color/darkcyan"
             android:id="@+id/cCircle"/>
 
     </RadioGroup>
@@ -196,10 +142,8 @@
         android:id="@+id/button"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/Text"
         android:layout_margin="5dp"
-        android:gravity="center"
         android:textSize="20dp"
         android:textColor="@color/whitesmoke"
         android:id="@+id/tResult"/>

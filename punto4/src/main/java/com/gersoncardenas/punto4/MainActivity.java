@@ -16,6 +16,9 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
+    private TextView result;
+    private static String strResult = "text value";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +36,12 @@ public class MainActivity extends ActionBarActivity {
 
         Button button = (Button)findViewById(R.id.button);
 
-        final TextView result = (TextView)findViewById(R.id.tResult);
+        result = (TextView)findViewById(R.id.tResult);
+
+        if(savedInstanceState !=null){
+            String savedText = savedInstanceState.getString(strResult);
+            result.setText(savedText);
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,7 +118,7 @@ public class MainActivity extends ActionBarActivity {
                 }
 
                 if(!error) {
-                    final String strResult = new Float(numResult).toString();
+                    strResult = new Float(numResult).toString();
                     result.setText(strResult);
                     error = false;
                 }
@@ -156,6 +164,12 @@ public class MainActivity extends ActionBarActivity {
                 radius.setEnabled(true);
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(strResult,(String)result.getText());
     }
 
     @Override

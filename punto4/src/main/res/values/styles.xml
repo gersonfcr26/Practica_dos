@@ -5,4 +5,25 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Text" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text.Edit">
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/whitesmoke</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+
+    <style name="Text.Radio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/darkcyan</item>
+    </style>
+
 </resources>

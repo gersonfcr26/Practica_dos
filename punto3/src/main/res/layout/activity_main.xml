@@ -8,14 +8,11 @@
     android:gravity="center">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+        style="@style/textView"
         android:layout_margin="20dp"
         android:text="@string/title"
         android:textStyle="bold"
-        android:textSize="30dp"
-        android:textColor="@color/gold"/>
+        android:textSize="30dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,28 +21,15 @@
         >
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/textView"
             android:layout_weight="2"
-            android:gravity="center"
             android:text="@string/tQuizzes"
             android:textSize="20dp"
-            android:textColor="@color/goldenrod"
             android:textStyle="bold"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/editText"
             android:layout_weight="3"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:background="@color/whitesmoke"
-            android:hint="@string/hint"
-            android:textColorHint="@color/gray"
-            android:textSize="20dp"
-            android:textColor="@color/darkblue"
-            android:textStyle="italic"
-            android:inputType="numberDecimal"
             android:id="@+id/eQuiz"/>
 
     </LinearLayout>
@@ -57,28 +41,15 @@
         >
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/textView"
             android:layout_weight="2"
-            android:gravity="center"
             android:text="@string/tExpo"
             android:textSize="20dp"
-            android:textColor="@color/goldenrod"
             android:textStyle="bold"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/editText"
             android:layout_weight="3"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:background="@color/whitesmoke"
-            android:hint="@string/hint"
-            android:textColorHint="@color/gray"
-            android:textSize="20dp"
-            android:textColor="@color/darkblue"
-            android:textStyle="italic"
-            android:inputType="numberDecimal"
             android:id="@+id/eExpo"/>
 
     </LinearLayout>
@@ -90,28 +61,15 @@
         >
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/textView"
             android:layout_weight="2"
-            android:gravity="center"
             android:text="@string/tLab"
             android:textSize="20dp"
-            android:textColor="@color/goldenrod"
             android:textStyle="bold"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/editText"
             android:layout_weight="3"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:background="@color/whitesmoke"
-            android:hint="@string/hint"
-            android:textColorHint="@color/gray"
-            android:textSize="20dp"
-            android:textColor="@color/darkblue"
-            android:textStyle="italic"
-            android:inputType="numberDecimal"
             android:id="@+id/eLab"/>
 
     </LinearLayout>
@@ -123,28 +81,15 @@
         >
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/textView"
             android:layout_weight="2"
-            android:gravity="center"
             android:text="@string/tFinal"
             android:textSize="20dp"
-            android:textColor="@color/goldenrod"
             android:textStyle="bold"/>
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/editText"
             android:layout_weight="3"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:background="@color/whitesmoke"
-            android:hint="@string/hint"
-            android:textColorHint="@color/gray"
-            android:textSize="20dp"
-            android:textColor="@color/darkblue"
-            android:textStyle="italic"
-            android:inputType="numberDecimal"
             android:id="@+id/eFinal"/>
 
     </LinearLayout>

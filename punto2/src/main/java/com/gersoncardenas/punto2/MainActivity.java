@@ -1,6 +1,7 @@
 package com.gersoncardenas.punto2;
 
 import android.content.Context;
+import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,9 +16,13 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
+    private TextView result;
+    private static String textValue = "text value";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         final EditText op1 = (EditText)findViewById(R.id.eOp1);
@@ -30,7 +35,12 @@ public class MainActivity extends ActionBarActivity {
 
         final Button button = (Button)findViewById(R.id.eButton);
 
-        final TextView result = (TextView)findViewById(R.id.eResult);
+        result = (TextView)findViewById(R.id.eResult);
+
+        if (savedInstanceState != null) {
+            String savedText = savedInstanceState.getString(textValue);
+            result.setText(savedText);
+        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,8 +60,6 @@ public class MainActivity extends ActionBarActivity {
                     float num2 = Float.parseFloat(strNum2);
 
                     float resultOp = 0;
-
-                    String strResult = "";
 
                     if (add.isChecked()) {
                         resultOp = num1 + num2;
@@ -73,10 +81,10 @@ public class MainActivity extends ActionBarActivity {
 
                     } else {
                         result.setEnabled(true);
-                        strResult = new Float(resultOp).toString();
+                        textValue = new Float(resultOp).toString();
                     }
 
-                    result.setText(strResult);
+                    result.setText(textValue);
 
                 }else{
                     result.setEnabled(false);
@@ -122,6 +130,11 @@ public class MainActivity extends ActionBarActivity {
         });
     }
 
+    @Override
+    protected void onSaveInstanceState (Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(textValue,(String)result.getText());
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
